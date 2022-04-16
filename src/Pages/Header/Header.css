@@ -1,0 +1,16 @@
+.nav {
+    background-color: #ede9e3;
+    height: 60px;
+}
+
+.logo {
+    color: #247881;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.nav a {
+    font-size: 20px;
+    font-weight: bold;
+}

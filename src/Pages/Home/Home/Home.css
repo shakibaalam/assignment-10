@@ -1,0 +1,17 @@
+.booking {
+    background-color: #247881;
+    height: 120px;
+}
+
+.btn-style {
+    background-color: rgb(228, 182, 63);
+    border-radius: 5px;
+}
+
+.btn-style:hover {
+    background-color: #EBD8C3;
+}
+
+.service-heading {
+    color: #397177;
+}
