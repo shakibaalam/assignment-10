@@ -3,7 +3,7 @@ import { IoMdArrowDroprightCircle } from 'react-icons/io';
 
 const Services = () => {
     return (
-        <div className='container my-5 py-5'>
+        <div id='services' className='container my-5 py-5 '>
             <div className='row my-5 py-5'>
                 <div className='col-12 col-md-6'>
                     <h2 className='service-heading'>Enjoy Some You-Time</h2>
