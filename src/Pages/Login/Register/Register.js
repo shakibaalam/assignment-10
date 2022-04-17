@@ -1,9 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendPasswordResetEmail, useUpdateProfile } from 'react-firebase-hooks/auth';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -16,27 +15,31 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
+    const [updateProfile, updating, udateError] = useUpdateProfile(auth);
 
     const nameRef = useRef('');
     const emailRef = useRef('');
     const passRef = useRef('');
     const confirmRef = useRef('');
 
-    const handleSignUp = e => {
+    const handleSignUp = async (e) => {
         e.preventDefault();
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const pass = passRef.current.value;
         const confirm = confirmRef.current.value;
         if (pass === confirm) {
-            createUserWithEmailAndPassword(email, pass);
+            await createUserWithEmailAndPassword(email, pass)
+            await updateProfile({ name });
+            alert('Updated profile');
             navigate('/');
-            console.log(email, pass);
+            console.log(email, pass, name);
         }
         else {
             return setError1('password didnt match')
         }
     }
+
     return (
         <div className='container w-50 mx-auto mt-5 pt-4'>
             <h1 className='text-center my-5 login-color'>SignUp...</h1>
@@ -49,9 +52,6 @@ const Register = () => {
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
-                    <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </Form.Text>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -82,8 +82,10 @@ const Register = () => {
                         SignUp
                     </Button>
                 </div>
-                <p>Already Have an Account? <Link to='/login'>SignIn</Link></p>
+
+                <p className='text-center'>Already have an account? <Link to='/login'>SignIn</Link></p>
             </Form>
+
         </div>
     );
 };
