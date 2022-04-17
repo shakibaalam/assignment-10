@@ -4,6 +4,8 @@ import Services from '../Services/Services/Services';
 import { IoMdArrowDroprightCircle } from 'react-icons/io';
 import './Home.css'
 import Footer from '../../Shared/Footer/Footer';
+import CustomLink from '../../Shared/CustomLink/CustomLink';
+import InfoSection from '../InfoSection/InfoSection ';
 
 const Home = () => {
     return (
@@ -17,14 +19,14 @@ const Home = () => {
                             <h2>Your Dream Vacation is Here</h2>
                         </div>
                         <div className='col-6 d-flex justify-content-center my-4'>
-                            <button className='btn fw-bold fs-5 btn-style px-4'> Book Now <IoMdArrowDroprightCircle></IoMdArrowDroprightCircle></button>
+                            <button className='btn fw-bold fs-5 btn-style px-4'><CustomLink to='/checkout'> Book Now <IoMdArrowDroprightCircle></IoMdArrowDroprightCircle></CustomLink></button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <Services></Services>
-
+            <InfoSection></InfoSection>
             <Footer></Footer>
         </div>
     );

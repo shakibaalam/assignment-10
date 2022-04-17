@@ -22,17 +22,16 @@ const Login = () => {
     const emailRef = useRef('');
     const passRef = useRef('');
 
-    //for requireauth
-    const from = location.state?.from?.pathname || "/";
-    if (user || Guser) {
-        navigate(from, { replace: true });
-    }
     const handleSignIn = e => {
         e.preventDefault();
         const email = emailRef.current.value;
         const pass = passRef.current.value;
         signInWithEmailAndPassword(email, pass);
-        navigate('/')
+    }
+    //for requireauth
+    const from = location.state?.from?.pathname || "/";
+    if (user || Guser) {
+        navigate(from, { replace: true });
     }
     //for reset pass
     const [sendPasswordResetEmail, sending, errorReset] = useSendPasswordResetEmail(auth);
