@@ -3,6 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import Services from '../Services/Services/Services';
 import { IoMdArrowDroprightCircle } from 'react-icons/io';
 import './Home.css'
+import Footer from '../../Shared/Footer/Footer';
 
 const Home = () => {
     return (
@@ -23,6 +24,8 @@ const Home = () => {
             </div>
 
             <Services></Services>
+
+            <Footer></Footer>
         </div>
     );
 };

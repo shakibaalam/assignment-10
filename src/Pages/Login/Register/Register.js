@@ -78,7 +78,7 @@ const Register = () => {
                     <Form.Check type="checkbox" label="Accept terms & conditions" />
                 </Form.Group>
                 <div className='text-center'>
-                    <Button disabled={!agree} className='w-50 btn fw-bold fs-5 btn-style px-4 my-2' variant="primary" type="submit">
+                    <Button disabled={!agree} className=' w-50 btn fw-bold fs-5 btn-style px-4 my-2' variant="primary" type="submit">
                         SignUp
                     </Button>
                 </div>

@@ -2,7 +2,23 @@
 
 Click here for code link: [Github Private Repo](https://github.com/programming-hero-web-course-4/independent-service-provider-shakibaalam).
 
-Click here for firebase link:[Live link](https://github.com/facebook/create-react-app).
+Click here for firebase link:[Live link](https://assignment-10-c4025.web.app/home#services).
+
+## About this projects are:
+-This project related with an independent Tourist Servicer
+-In this project there is a header
+-A service section
+-Login page ,sign up 
+-And also a question answering part in blog page
+
+## List of Techologies:
+-create react app
+-bootstrap
+-firebase authentication & hoisting
+-firebase hooks
+-react router
+-react icon
+-react toastify
 
 ## Available Scripts
 
