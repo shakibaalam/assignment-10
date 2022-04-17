@@ -20,7 +20,7 @@ const Header = () => {
                             <CustomLink to='/about'>About me</CustomLink>
                         </Nav.Link>
                         <Nav.Link >
-                            <CustomLink to='/login'>Login</CustomLink>
+                            <CustomLink to='/login'>SignIn</CustomLink>
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
