@@ -7,7 +7,8 @@ const About = () => {
             <hr />
             <div className='w-50 mx-auto my-4'>
                 <h2>My name is Shakiba Alam</h2>
-                <p>I am studying on BSC Professional in CSE at Dhaka City College.I am 23 years old.I want to be a Full Stack Web Developer.Now I am learning web development from Programming Hero.My goal is to become a Developer</p>
+                <p>I am studying on BSC Professional in CSE at Dhaka City College.I am 23 years old.I want to be a Full Stack Web Developer.Now I am learning web development from Programming Hero.My goal is to become a Developer.I am working hard to achieve my goal though it is very difficult
+                    for me to mainatin my daily works.But I tried my best and I will alltime.</p>
             </div>
 
         </div>

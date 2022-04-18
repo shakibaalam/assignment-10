@@ -11,6 +11,7 @@ import './Login.css'
 const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
+    //for googole sign in
     const [signInWithGoogle, Guser, Gloading, Gerror] = useSignInWithGoogle(auth);
     const [
         signInWithEmailAndPassword,
@@ -95,7 +96,7 @@ const Login = () => {
                 </div>
             </div>
             <div className='text-center'>
-                <button onClick={() => signInWithGoogle()} className='text-white w-50 btn fw-bold fs-5 btn-style px-4 my-2'><FcGoogle></FcGoogle> Google SignUp</button>
+                <button onClick={() => signInWithGoogle()} className='text-white w-50 btn fw-bold fs-5 btn-style px-4 my-2'><FcGoogle></FcGoogle> Google SignIn</button>
             </div>
             <ToastContainer />
         </div>
